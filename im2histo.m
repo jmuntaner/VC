@@ -9,5 +9,5 @@ function h = im2histo(im)
     bN=double(b)./ilu;
     imN=cat(3,rN,gN,bN);
     imN=im2uint8(imN);
-    h=histcounts2(imN(:,:,1),imN(:,:,2),8);
+    h=histcounts2(imN(:,:,1),imN(:,:,3),8);
 end
