@@ -10,9 +10,14 @@ BChi = prctile(barcelonaChi, 65);
 BInter = prctile(barcelonaInter, 35);
 votedIntersec = resultsVoting(data,BInter(1),BInter(2),BInter(3),1);
 votedChi = resultsVoting(data,BChi(1),BChi(2),BChi(3),2);
-m=min(votedIntersec,votedChi);
+
+%m=min(votedIntersec,votedChi);
 M=max(votedIntersec,votedChi);
 
+voting3 = M>2;
+totals3 = sum(voting3,2)
+
+%{
 voting1 = M>=1;
 totals1 = sum(voting1,2)
 voting1 = m>=1;
@@ -27,3 +32,4 @@ voting3 = M>2;
 totals3 = sum(voting3,2)
 voting3 = m>2;
 totals3 = sum(voting3,2)
+%}
