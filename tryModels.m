@@ -11,9 +11,10 @@ function results = tryModels(h1, h2, h3)
             ipath = strcat(path,equips(i),"/",num,".jpg");
             itmp = imread(ipath);
             htmp = im2histo(itmp);
-            p1 = histogramsCompare(h1,htmp);
-            p2 = histogramsCompare(h2,htmp);
-            p3 = histogramsCompare(h3,htmp);
+            hfilt = imgaussfilt(htmp,2);
+            p1 = histogramsCompare(h1,hfilt);
+            p2 = histogramsCompare(h2,hfilt);
+            p3 = histogramsCompare(h3,hfilt);
             results(i,j,:)=[p1, p2, p3];
         end
     end

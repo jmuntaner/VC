@@ -5,4 +5,7 @@ function [h1, h2, h3] = initModels
     h2 = im2histo(itmp);
     itmp = imread("model3.jpg");
     h3 = im2histo(itmp);
+    h1 = imgaussfilt(h1,2);
+    h2 = imgaussfilt(h2,2);
+    h3 = imgaussfilt(h3,2);
 end
