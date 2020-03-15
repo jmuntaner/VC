@@ -1,6 +1,6 @@
 %cal posar-se a la carpeta que toca o modificar el path dels scripts
-[h1, h2, h3] = initModels;
-data = tryModels(h1, h2, h3);
+H = initModels;
+data = tryModels(H);
 %percentiles
 barcelonaInter=data(2,:,1,:);
 barcelonaChi=data(2,:,2,:);
@@ -8,8 +8,8 @@ barcelonaInter=squeeze(barcelonaInter);
 barcelonaChi=squeeze(barcelonaChi);
 BChi = prctile(barcelonaChi, 65);
 BInter = prctile(barcelonaInter, 35);
-votedIntersec = resultsVoting(data,BInter(1),BInter(2),BInter(3),1);
-votedChi = resultsVoting(data,BChi(1),BChi(2),BChi(3),2);
+votedIntersec = resultsVoting(data,BInter,1);
+votedChi = resultsVoting(data,BChi,2);
 
 %m=min(votedIntersec,votedChi);
 M=max(votedIntersec,votedChi);

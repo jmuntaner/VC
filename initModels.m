@@ -1,4 +1,4 @@
-function [h1, h2, h3] = initModels
+function H = initModels
     itmp = imread("model1.jpg");
     h1 = im2histo(itmp);
     itmp = imread("model2.jpg");
@@ -8,4 +8,6 @@ function [h1, h2, h3] = initModels
     h1 = imgaussfilt(h1,1);
     h2 = imgaussfilt(h2,1);
     h3 = imgaussfilt(h3,1);
+    H=cat(3,h1,h2,h3);
+    H=shiftdim(H,2);
 end

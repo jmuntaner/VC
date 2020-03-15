@@ -24,5 +24,5 @@ function p = chisqrt(h1,h2)
     N = (h1n-h2n).^2;
     D = (h1n+h2n);
     P = N./D;
-    p = sum(P,'all','omitnan');
+    p = sum(P,'all','omitnan')/2;
 end
