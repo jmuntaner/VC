@@ -8,6 +8,10 @@ function [p,votes,results] = testImage(im)
     %50 55 (12.0833 fp 15 fn) minim aparent +27.0833
     %50 50 (13.333 fp 15 fn)
     %48 58 (10 fp 15 fn) minim +25
+    %48 59 (10 fp 15 fn)
+    %47 67 (7.5 fp 17.5 fn)
+    %47 70 (7.5 fp 17.5 fn)
+    %47 71 (7.5 fp 17.5 fn)
     [BChi, BInter] = loadThreshold(48,58); 
     h = imgaussfilt(im2histo(im),1);
     N = size(H,1);
