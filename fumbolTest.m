@@ -2,6 +2,7 @@
 H = initModels;
 data = tryModels(H);
 %percentiles
+barcelona=squeeze(data(2,:,:,:));
 barcelonaInter=data(2,:,1,:);
 barcelonaChi=data(2,:,2,:);
 barcelonaInter=squeeze(barcelonaInter);
@@ -13,9 +14,12 @@ votedChi = resultsVoting(data,BChi,2);
 
 %m=min(votedIntersec,votedChi);
 M=max(votedIntersec,votedChi);
+%S=votedIntersec+votedChi;
 
 voting3 = M>2;
-totals3 = sum(voting3,2)
+totalsM = sum(voting3,2)
+find(voting3(2,:) == 0)
+totalsP = totalsM./0.4
 
 %{
 voting1 = M>=1;
