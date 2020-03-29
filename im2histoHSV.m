@@ -1,5 +1,4 @@
-% takes an image and returns the 2D-RB(normalised)-histogram
-function h = im2histo(im)
-    imN=im2normHSV(im);
-    h=histcounts2(imN(:,:,1),imN(:,:,3),32);
+% takes an image and returns the 2D-HS-histogram
+function h = im2histoHSV(im)
+    h=histcounts2(im(:,:,1),im(:,:,2),50); %eliminem la component value
 end

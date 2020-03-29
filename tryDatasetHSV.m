@@ -10,7 +10,7 @@ function [totals, falsePos, falseNeg, results] = tryDatasetHSV()
             end
             ipath = strcat(path,equips(i),"/",num,".jpg");
             itmp = imread(ipath);
-            results(i,j) = barca(itmp);
+            results(i,j) = barcaHSV(itmp);
         end
     end
     totals = sum(results,2);

@@ -1,4 +1,4 @@
-function results = tryModels(H)
+function results = tryModels(H, colormodel)
     path = "./soccer_data/soccer/";
     equips = ["acmilan", "barcelona", "chelsea", "juventus", "liverpool", "madrid", "psv"];
     N = size(H,1);
@@ -11,7 +11,12 @@ function results = tryModels(H)
             end
             ipath = strcat(path,equips(i),"/",num,".jpg");
             itmp = imread(ipath);
-            htmp = im2histo(itmp);
+            switch(colormodel)
+                case {0, 'rgb'}
+                    htmp = im2histo(itmp);
+                case {1, 'hsv'}
+                    htmp = im2histoHSV(itmp);
+            end
             hfilt = imgaussfilt(htmp,1);
             for k = 1:N
                 hmodel = squeeze(H(k,:,:));
