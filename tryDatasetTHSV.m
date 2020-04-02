@@ -3,7 +3,7 @@ function [totals, falsePos, falseNeg, results] = tryDatasetTHSV(chi, inter)
     results = zeros(7,40);    
     for i = 1:7
         for j = 1:40
-            results(i,j) = testImageTHSV(D{i,j}, chi, inter);
+            results(i,j) = barcaT(D{i,j}, chi, inter);
         end
     end
     totals = sum(results,2);
