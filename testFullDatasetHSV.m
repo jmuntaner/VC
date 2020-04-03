@@ -16,6 +16,7 @@ function R = testFullDatasetHSV
     for i=1:51
         i
         for j=1:51
+            j
             [~,fp,fn]=tryDatasetTHSV(i+24,j+24);
             R(i,j,1)=fp;
             R(i,j,2)=fn;

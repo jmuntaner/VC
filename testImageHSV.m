@@ -1,7 +1,7 @@
 function [p,votes,results] = testImageHSV(im)
     m = matfile("modelsHSV.mat");
     H = m.H;
-    [BChi, BInter] = loadThreshold(70,26); 
+    [BChi, BInter] = loadThreshold(60,75); 
     h = imgaussfilt(im2histoHSV(im),1);
     N = size(H,1);
     results = zeros(2,N);
