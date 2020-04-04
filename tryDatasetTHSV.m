@@ -1,3 +1,7 @@
+% Auxiliar function to testFullDatasetHSV
+% Tests soccer_data with the given parameters
+% Similar to tryDatasetHSV but with chi and inter as parameters and not
+% pre-assigned.
 function [totals, falsePos, falseNeg, results] = tryDatasetTHSV(chi, inter)
     global D;
     results = zeros(7,40);    

@@ -1,4 +1,4 @@
-% Tries the whole dataset with the current coded parameters
+% Tries the whole dataset with the current coded parameters in barcaRGB
 % Returns the following, in parethesis we indicate its range:
 % totals: number of positives for each team (0-40)
 % falsePos: percentage of false positives (0-100)

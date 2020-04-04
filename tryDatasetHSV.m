@@ -1,3 +1,9 @@
+% Tries the whole dataset with the current coded parameters in barcaHSV
+% Returns the following, in parethesis we indicate its range:
+% totals: number of positives for each team (0-40)
+% falsePos: percentage of false positives (0-100)
+% falseNeg: percentage of false negatives (0-100)
+% results: individual result for each image of the dataset (0-1)
 function [totals, falsePos, falseNeg, results] = tryDatasetHSV()
     path = "./soccer_data/soccer/";
     equips = ["acmilan", "barcelona", "chelsea", "juventus", "liverpool", "madrid", "psv"];

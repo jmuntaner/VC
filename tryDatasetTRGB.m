@@ -1,3 +1,7 @@
+% Auxiliar function to testFullDatasetRGB
+% Tests soccer_data with the given parameters
+% Similar to tryDatasetRGB but with chi and inter as parameters and not
+% pre-assigned.
 function [totals, falsePos, falseNeg, results] = tryDatasetTRGB(chi, inter)
     global D;
     results = zeros(7,40);    

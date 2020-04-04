@@ -1,3 +1,6 @@
+% Calculates the histogramCompare values of soccer_data images, in relation
+% to models Hs. We can use this function to obtain the Thresholds needed
+% (if we get the barcelona component (squeeze(results(2,:,:,:))).
 function results = tryModels(H, colormodel)
     path = "./soccer_data/soccer/";
     equips = ["acmilan", "barcelona", "chelsea", "juventus", "liverpool", "madrid", "psv"];
