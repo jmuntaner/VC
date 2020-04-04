@@ -1,9 +1,9 @@
-function p = barca(im)
+function p = barcaRGB(im)
     p = barcaR(im,-1);
 end
 
 function p = barcaR(im, prevSum)
-    [p, votes, ~] = testImage(im);
+    [p, votes, ~] = testImageRGB(im);
     if (p == 1)
         return;
     end

@@ -51,6 +51,6 @@ function [p,votes,results] = voteImage(im,colormodel)
         results(1,k) = histogramsCompare(hmodel,h,0);
         votes(1,k) = results(1,k)>= BInter(1,k);
     end
-    M=max(votes(1,:),votes(2,:));
+    M = max(votes(1,:),votes(2,:));
     p = sum(M,'all')>2;
 end

@@ -11,7 +11,7 @@ function results = tryModels(H, colormodel)
             end
             ipath = strcat(path,equips(i),"/",num,".jpg");
             itmp = imread(ipath);
-            htmp=histo(itmp,colormodel);
+            htmp = histo(itmp,colormodel);
             hfilt = imgaussfilt(htmp,1);
             for k = 1:N
                 hmodel = squeeze(H(k,:,:));

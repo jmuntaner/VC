@@ -1,10 +1,10 @@
-function H = histogramModels(metrica)
+function H = histogramModels(colormodel)
     itmp = imread("model1.jpg");
-    h1 = histo(itmp,metrica);
+    h1 = histo(itmp,colormodel);
     itmp = imread("model2.jpg");
-    h2 = histo(itmp,metrica);
+    h2 = histo(itmp,colormodel);
     itmp = imread("model3.jpg");
-    h3 = histo(itmp,metrica);
+    h3 = histo(itmp,colormodel);
     h1 = imgaussfilt(h1,1);
     h2 = imgaussfilt(h2,1);
     h3 = imgaussfilt(h3,1);

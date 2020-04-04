@@ -1,4 +1,4 @@
-function [totals, falsePos, falseNeg, results] = tryDatasetT(chi, inter)
+function [totals, falsePos, falseNeg, results] = tryDatasetTRGB(chi, inter)
     global D;
     results = zeros(7,40);    
     for i = 1:7

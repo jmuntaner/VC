@@ -4,7 +4,7 @@
 % falsePos: percentage of false positives (0-100)
 % falseNeg: percentage of false negatives (0-100)
 % results: individual result for each image of the dataset (0-1)
-function [totals, falsePos, falseNeg, results] = tryDataset
+function [totals, falsePos, falseNeg, results] = tryDatasetRGB
     path = "./soccer_data/soccer/";
     equips = ["acmilan", "barcelona", "chelsea", "juventus", "liverpool", "madrid", "psv"];
     results = zeros(7,40);
@@ -16,7 +16,7 @@ function [totals, falsePos, falseNeg, results] = tryDataset
             end
             ipath = strcat(path,equips(i),"/",num,".jpg");
             itmp = imread(ipath);
-            results(i,j) = barca(itmp);
+            results(i,j) = barcaRGB(itmp);
         end
     end
     totals = sum(results,2);

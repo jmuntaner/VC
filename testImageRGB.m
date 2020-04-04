@@ -1,4 +1,4 @@
-function [p,votes,results] = testImage(im)
+function [p,votes,results] = testImageRGB(im)
     m = matfile("models.mat");
     H = m.H;
     %65 65 (20.833 fp 10 fn)
