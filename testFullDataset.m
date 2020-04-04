@@ -15,6 +15,7 @@ function R = testFullDataset(colormodel)
     %models
     H = m.H;
     R = zeros(51,51,3);
+    results = zeros(7,40);
     for i=1:11
         i
         for j=1:11
@@ -28,7 +29,6 @@ function R = testFullDataset(colormodel)
         end
     end
     function [totals, falsePos, falseNeg] = tryDatasetT
-        results = zeros(7,40);
         for ii = 1:7
             for jj = 1:40
                 results(ii,jj) = auxTryImage(D{ii,jj});
