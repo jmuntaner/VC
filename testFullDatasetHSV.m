@@ -12,12 +12,12 @@ function R = testFullDatasetHSV
     global H
     m = matfile("modelsHSV.mat");
     H = m.H;
-    R = zeros(51,51,3);
-    for i=5:5:100
+    R = zeros(41,41,3);
+    for i=1:41
         i
-        for j=5:5:100
-            j
-            [~,fp,fn]=tryDatasetTHSV(i,j);
+        2*(i+9)
+        for j=1:41
+            [~,fp,fn]=tryDatasetTHSV(2*(i+9),2*(j+9));
             R(i,j,1)=fp;
             R(i,j,2)=fn;
             R(i,j,3)=fn+fp;
