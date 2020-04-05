@@ -1,3 +1,4 @@
+% Loads (opens the images) the entire soccer_data into variable D
 function D = loadDataset
     D = cell(7,40);
     path = "./soccer_data/soccer/";

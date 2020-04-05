@@ -12,6 +12,8 @@ function R = testFullDatasetRGB
     global H
     m = matfile("models.mat");
     H = m.H;
+    % tests with steps of one between 25 and 76 and stores in consecutive
+    % values
     R = zeros(51,51,3);
     for i=1:51
         i

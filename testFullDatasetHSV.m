@@ -12,6 +12,8 @@ function R = testFullDatasetHSV
     global H
     m = matfile("modelsHSV.mat");
     H = m.H;
+    % tests with steps of two between 20 and 100 and stores in consecutive
+    % values
     R = zeros(41,41,3);
     for i=1:41
         i

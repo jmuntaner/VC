@@ -1,3 +1,5 @@
+% Initialises models from images, not really needed as there are the
+% pertinent matfiles.
 function H = histogramModels(colormodel)
     itmp = imread("model1.jpg");
     h1 = histo(itmp,colormodel);

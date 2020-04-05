@@ -1,3 +1,4 @@
+% Compares histograms h1 and h2 with metric
 function P = histogramsCompare(h1,h2,metric)
     switch(metric)
         case {0, 'intersect'}

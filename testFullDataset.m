@@ -14,11 +14,13 @@ function R = testFullDataset(colormodel)
     barChi = b(:,2,:);
     %models
     H = m.H;
+    % tests with steps of one between 25 and 76 and stores in consecutive
+    % values
     R = zeros(51,51,3);
     results = zeros(7,40);
-    for i=1:11
+    for i=1:51
         i
-        for j=1:11
+        for j=1:51
             j
             BChi = prctile(barChi, i+24);
             BInter = prctile(barInter, j+24);
