@@ -1,6 +1,6 @@
 %cal posar-se a la carpeta que toca o modificar el path dels scripts
 H = initModels;
-data = tryModels(H);
+data = tryModels(H,0);
 %percentiles
 barcelona=squeeze(data(2,:,:,:));
 barcelonaInter=data(2,:,1,:);
